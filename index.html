@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F3F1EA;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav button {
+            background: none;
+            border: none;
+            margin: 0 15px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        nav button:hover, nav button.active {
+            color: #007bff;
+        }
+        .section {
+            display: none;
+            background-color: white;
+            margin-top: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .section.active {
+            display: block;
+        }
+        .project-category {
+            margin-bottom: 20px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .project-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav id="main-nav">
+        <button onclick="showSection('bio')" class="active">About</button>
+        <button onclick="showSection('projects')">Projects</button>
+        <button onclick="showSection('writing')">Writing</button>
+    </nav>
+
+    <div class="container">
+        <div id="bio" class="section active">
+            <h2>About Me</h2>
+            <p>Software engineer passionate about creating innovative solutions. With a background in computer science and a love for technology, I enjoy building meaningful projects that solve real-world problems.</p>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>My Projects</h2>
+            <div class="project-category">
+                <h3>Web Development</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Portfolio Website</h4>
+                        <p>Personal portfolio site with responsive design</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>E-commerce Platform</h4>
+                        <p>Full-stack online store application</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project-category">
+                <h3>Data Science</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Predictive Analytics</h4>
+                        <p>Machine learning project</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>Data Visualization</h4>
+                        <p>Interactive dashboard</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="writing" class="section">
+            <h2>My Writing</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Tech Insights Blog</h3>
+                    <p>Exploring emerging technologies and software development trends</p>
+                </div>
+                <div class="project-card">
+                    <h3>Technical Tutorials</h3>
+                    <p>In-depth guides on programming and development best practices</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 My Personal Portfolio</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from all nav buttons
+            const navButtons = document.querySelectorAll('nav button');
+            navButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Highlight active nav button
+            const activeButton = document.querySelector(`button[onclick="showSection('${sectionId}')"]`);
+            activeButton.classList.add('active');
+        }
+    </script>
+</body>
+</html>
