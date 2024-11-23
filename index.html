@@ -118,7 +118,7 @@
             <p>
                 <p>I am a student in the Molecular Engineering group of the Department of Physics in Cambridge (UK).</p>
                 <p>I work on robust integrations for language models. Outside of academia, I have been involved in a number of startups and SMEs.</p>
-                <p>I enjoy doing some teaching. I have taught 1st, 2nd and 3rd year undergraduate content as well as group supervisions at Cambridge.</p>
+                <p>I like to do some teaching, since it keeps me connected to the field. I have taught 1st, 2nd and 3rd year undergraduate content as well as group supervisions at Cambridge.</p>
                 <br><strong>Research Group Bio:</strong> <a href="https://www.phy.cam.ac.uk/research/research-groups/MolE" target="_blank">Molecular Engineering Group</a>
                 <br><strong>Research Group Publications:</strong> <a href="https://www.webofscience.com/wos/author/record/C-5991-2008" target="_blank">Web of Science</a>
             </p>
@@ -145,13 +145,11 @@
         </div>
 
         <div id="writing" class="section writing-list">
-            <h2>Short essays</h2>
+            <h2>Written Pieces</h2>
             <p>
                 A personal website is only 'personal' with some insights into the mind of the author.
             </p>
-            <a href="#" onclick="showWriting('hello-world')"></a>
-            <a href="#" onclick="showWriting('goodbye-thoughts')">Stub</a>
-            <a href="#" onclick="showWriting('never-ending-story')"></a>
+            <a href="#" onclick="showWriting('stub')">Stub</a>
         </div>
 
         <div id="writing-content" class="section">
@@ -176,19 +174,11 @@
     
         function showWriting(articleId) {
             const contentMap = {
-                'hello-world': `
-                    <p>Why do you trim your fingernails when they’ll just grow back later?</p>
-                    <p>If there is an absolute chronology, some permenant record of all actions throughout time, then that is your only legacy.</p>
-                    <p>In any case, thinking about eternity is a faff. Live with your awareness close to your daily life and the present.</p>
-                `,
-                'goodbye-thoughts': `
+                'stub': `
                 <p>It’s easy to modulate your behaviour in public, social situations. You’re trained to do this your entire life.</p>
                 <p>It’s more interesting to reflect on the actions we take in private. This boils down to a few factors. By default, momentum and habits. Otherwise, your ability to self-reflect and think long term.</p>
                 <p>How you perceive and categorise actions, that is the engine of your life, the source of your own pleasure or distress. It makes sense that you might want to tweak that behaviour from factory settings.</p>
                 `,
-                'never-ending-story': `
-                    <p>Life is a tapestry woven with endless threads. Each moment is a story within a story, a world within a world.</p>
-                `
             };
     
             const writingContent = document.getElementById('writing-placeholder');
